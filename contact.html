@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .me{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Images/logo.png" width="125px">
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="SHOP2.HTML">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="accounts.html">Account</a></li>
+                    </ul>
+                </nav>
+        <a href="cart.html"><img src="ICONS/cart.png" width="30px" height="30px"></a>
+        <img src="Images/menu-icon.png" class="menu-icon" onclick="menutoggle()">
+        <hr>
+            </div>
+            <br>
+            <br>
+            <br>
+            
+
+<body style="background: radial-gradient(#fff,#ffd6d6);">
+    <div>
+       <h1>YOU CAN CONTACT US ON THESE SOCIAL MEDIA HANDLES</h1>
+    </div>
+    <div>
+        <h3><img src="ICONS/call.png" width="20px" height="20px">0597308462</h3>
+        <h3><img src="ICONS/mail.png" width="20px" height="20px">YAWATTAOWUSU@GMAIL.COM</h3>
+        <h3><img src="ICONS/facebook.png" width="20px" height="20px">Atta Owusu Yaw Junior</h3>
+        <h3><img src="ICONS/twitter.png" width="20px" height="20px">attay_jnr</h3>
+    </div>
+    <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+                <!-- footer -->
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer-col-1">
+                                <h3>Download Our App</h3>
+                                <p>Download App for Android and ios mobile phones.</p>
+                                <div class="app-logo">
+                                    <img src="Images/goplay.png">
+                                    <img src="Images/appstore.png">
+                                </div>
+                            </div>
+                            <div class="footer-col-2">
+                                <img src="Images/logo.png">
+                                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Media Accessible to the Many</p>
+                            </div>
+                            <div class="footer-col-3">
+                                <h3>Useful Links</h3>
+                                <ul>
+                                    <li>Coupons</li>
+                                    <li>Blog Post</li>
+                                    <li>Return Policy</li>
+                                    <li>Join Affiliate</li>
+                                </ul>
+                            </div>
+                            <div class="footer-col-4">
+                                <h3>Follow Us</h3>
+                                <ul>
+                                    <li>Facebook</li>
+                                    <li>Twitter</li>
+                                    <li>Instagram</li>
+                                    <li>YouTube</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="copyright">Copyright 2020 - Easy Tutorials</p>
+                    </div>
+                </div>
+    <!-- js for toggle menu -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+    
+        MenuItems.style.maxHeight ="0px"
+    
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                 {
+                    MenuItems.style.maxHeight ="200px"
+                 }
+            else
+                 {
+                    MenuItems.style.maxHeight ="0px" 
+                 }
+        }
+    </script>
+    
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+    
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login(){
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+    </body>
+    </html>
