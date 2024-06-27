@@ -5,31 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="JS/bootstrap.min.css"> -->
     <style>
-        .me{
-            width: 25%;
-        }
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+       }
+       .conta{
+        position: relative;
+        min-height: 100vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url(Images/hahaha.jpg);
+        background-size: cover;
+       }
+       .conta .conte{
+        max-width: 800px;
+        text-align: center;
+       }
+       .conta .conte h2{
+        font-size: 36px;
+        font-weight: 500;
+        color: #fff;
+       }
+       .conta .conte p{
+        font-weight: 300;
+        color: #fff;
+       }
+       .contai{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+       }
+       .contai .contaInfo{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+       }
+       .contaInfo{
+        flex-basis: 1;
+       }
+       .contai .contaInfo .bax{
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+       }
+       .contai .contaInfo .bax .icon{
+        min-width: 60px;
+        height: 60px;
+        background: #282525;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px;
+       }
+       .contai .contaInfo .bax .text{
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: #fff;
+        flex-direction: column;
+        font-weight: 300;
+       }
+       .contai .contaInfo .bax .text h3{
+        font-weight: 500;
+        color: #00bcd4;
+       }
+       .contai .contaInfo .bax .text p{
+        color: #fff;
+       }
+       .contaForm{
+        width: 40%;
+        padding: 40px;
+        background: #fff;
+        flex-basis: 1;
+       }
+       .contaForm h2{
+        font-size: 30px;
+        color: #333;
+        font-weight: 500;
+       }
+       .contaForm .inputbox{
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+       }
+       .contaForm .inputbox input,
+       .contaForm .inputbox textarea{
+        width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid #333;
+        outline: none;
+        resize: none;
+       }
+       .contaForm .inputbox span{
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #666;
+       }
+       .contaForm .inputbox input:focus ~ span, 
+       .contaForm .inputbox input:valid ~ span,
+       .contaForm .inputbox textarea:focus ~ span,
+       .contaForm .inputbox textarea:valid ~ span 
+       {
+        color: #e91e63;
+        font-size: 12px;
+        transform: translateY(-20px);
+       }
+       .contaForm .inputbox input[type="submit"]{
+        width: 100px;
+        background: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 10px;
+       }
+
     </style>
 </head>
 <body>
    
     <div id="header">
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="Images/logo.png" width="125px">
-                </div>
-                <nav>
-                    <ul id="menuItems">
-                        <li><a href="SHOP2.HTML">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="accounts.html">Account</a></li>
-                    </ul>
-                </nav>
-        <a href="cart.html"><img src="ICONS/cart.png" width="30px" height="30px"></a>
-        <img src="Images/menu-icon.png" class="menu-icon" onclick="menutoggle()">
+      <nav>
+        <ul>
+          <li><a href="index.html"><img src="All Products - STORE_files/logo.png" width="130px" alt=""></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="accounts.html">Accounts</a></li>
+          <li><a href="products.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></a></li>
+        </ul>
+      </nav>
         <hr>
             </div>
             <br>
@@ -38,16 +164,57 @@
             
 
 <body style="background: radial-gradient(#fff,#ffd6d6);">
-    <div>
-       <h1>YOU CAN CONTACT US ON THESE SOCIAL MEDIA HANDLES</h1>
+<section class="conta">
+    <div class="conte">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amrt, egyig guewyy fguy ewuyv weguyh weyuv fuyvh weyghv eyuhv weyuvh eyhv </p>
     </div>
-    <div>
-        <h3><img src="ICONS/call.png" width="20px" height="20px">0597308462</h3>
-        <h3><img src="ICONS/mail.png" width="20px" height="20px">YAWATTAOWUSU@GMAIL.COM</h3>
-        <h3><img src="ICONS/facebook.png" width="20px" height="20px">Atta Owusu Yaw Junior</h3>
-        <h3><img src="ICONS/twitter.png" width="20px" height="20px">attay_jnr</h3>
+    <div class="contai">
+        <div class="contaInfo">
+            <div class="bax">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>4671 Sugar Camp Road, <br>Appiadu,Kumasi, <br>55060</p>
+                </div>
+            </div>
+            <div class="bax">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>+233 597 308 462</p>
+                </div>
+            </div>
+            <div class="bax">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>yawattaowusu@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="contaForm">
+            <form action="">
+                <h2>Message Us</h2>
+                <div class="inputbox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputbox">
+                    <input type="text" name="" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputbox">
+                    <textarea required="required"></textarea>
+                    <span>Type your Message...</span>
+                </div>
+                <div class="inputbox">
+                    <input type="submit" name="" value="send">
+                </div>
+            </form>
+        </div>
     </div>
-    <br>
+</section>
             <br>
             <br>
             <br>
@@ -59,23 +226,22 @@
                         <div class="row">
                             <div class="footer-col-1">
                                 <h3>Download Our App</h3>
-                                <p>Download App for Android and ios mobile phones.</p>
+                                <p style="color: white;">Download App for Android and ios mobile phones.</p>
                                 <div class="app-logo">
                                     <img src="Images/goplay.png">
                                     <img src="Images/appstore.png">
                                 </div>
                             </div>
                             <div class="footer-col-2">
-                                <img src="Images/logo.png">
-                                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Media Accessible to the Many</p>
+                                <p style="color: white;">Our Purpose Is To Sustainably Make the Pleasure and Benefits of Media Accessible to the Many</p>
                             </div>
                             <div class="footer-col-3">
                                 <h3>Useful Links</h3>
-                                <ul>
-                                    <li>Coupons</li>
-                                    <li>Blog Post</li>
-                                    <li>Return Policy</li>
-                                    <li>Join Affiliate</li>
+                                <ul style="color: white; list-style: none; text-decoration: none;">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="accounts.html">Accounts</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
                             <div class="footer-col-4">
@@ -89,7 +255,7 @@
                             </div>
                         </div>
                         <hr>
-                        <p class="copyright">Copyright 2020 - Easy Tutorials</p>
+                        <p class="copyright">Copyright 2024 - Easy Tutorials</p>
                     </div>
                 </div>
     <!-- js for toggle menu -->
@@ -126,5 +292,9 @@
             Indicator.style.transform = "translateX(0px)";
         }
     </script>
+
+
+<script src="JS/script.js"></script>
+ <!-- <script src="JS/bootstrap.bundle.min.js"></script> -->
     </body>
     </html>
