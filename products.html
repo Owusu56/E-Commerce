@@ -3,358 +3,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - STORE</title>
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="JS/bootstrap.min.css"> -->
+    <script src="script.js" defer></script>
     <style>
-       #header{
-        background: radial-gradient(#fff,#ffd6d6);
-       }
+      *{
+        font-family: 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: all .2s linear;
+        text-transform: capitalize;
+      }
+      html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+      }
+      body{
+background: #eee;
+      }
     </style>
-    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
 
-    <nav>
-        <ul>
-          <li><a href="index.html"><img src="All Products - STORE_files/logo.png" width="130px" alt=""></a></li>
+  <div class="container" style="background: yellowgreen;">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="All Products - STORE_files/logo.png" width="125px"></a>
+      </div>
+      <nav>
+        <ul id="MenuItems" style="font-size: 16px;">
           <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="accounts.html">Accounts</a></li>
+          <li><a href="accounts.html">Account</a></li>
           <li><a href="products.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></a></li>
         </ul>
       </nav>
-
-<!-- FEATURED PRODUCTS -->
-
-<div class="small-container">
-    <div class="row row-2">
-        <h2>All Products</h2>
-        <select>
-            <option class="button">Default Shorting</option>
-            <option>Short by price</option>
-            <option>Short by popularity</option>
-            <option>Short by rating</option>
-            <option>Short by sale</option>
-        </select>
+      <a href="cart.html"><img src="ICONS/cart.png" width="30px" height="30px"></a>
+      <img src="ICONS/menu-icon.png" class="menu-icon" onclick="menutoggle()">
     </div>
-   
-    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-          <img src="Images/img4.png" style="border-radius: 10px; width: 200px; height:200px;">
-             <div style="text-align: center;">
-              <h4> 32 Frameless Android <br>Smart LED TV</h4>
-             <p>$1,299.00</p>
-             <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-             </div>
+    
+    </div>
+    <br>
+    <div class="boss">
+      <div class="mycontain">
+        <input type="text" placeholder="Search...">
+        <i class="sea"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></i>
+      </div>
+    </div>
+
+
+
+
+    <div class="fight">
+
+      <h3 class="title">All Products</h3>
+      <div class="fight-container">
+    
+      <div class="smile" data-name="p-1">
+        <img src="imgs/pic13.jpg" width="100%">
+        <h3>LG 32LP500BPTA 32 inches</h3>
+        <div class="price">$1,200.00</div>
+      </div>
+      <div class="smile" data-name="p-2">
+        <img src="Images/img1.png" width="100%">
+        <h3>QLED Screen</h3>
+        <div class="price">$1,705.00</div>
+      </div>
+      <div class="smile" data-name="p-3">
+        <img src="imgs/pic14.jpg" width="100%">
+        <h3>Experia</h3>
+        <div class="price">$941.00</div>
+      </div>
+      <div class="smile" data-name="p-4">
+        <img src="imgs/pic1.jpg" width="100%">
+        <h3>LED Screen</h3>
+        <div class="price">$2,700.00</div>
+      </div>
+      <div class="smile" data-name="p-5">
+        <img src="imgs/pic2.jpg" width="100%">
+        <h3>Acer</h3>
+        <div class="price">$3,840.00</div>
+      </div>
+      <div class="smile" data-name="p-6">
+        <img src="Images/img4.png" width="100%">
+        <h3>Inno-Hit</h3>
+        <div class="price">$1,500.00</div>
+      </div>
+      <div class="smile" data-name="p-7">
+        <img src="imgs/pic15.jpg" width="100%">
+        <h3>Sony</h3>
+        <div class="price">$2,050.00</div>
+      </div>
+      <div class="smile" data-name="p-8">
+        <img src="Images/img5.png" width="100%">
+        <h3>Banana</h3>
+        <div class="price">$1,090.00</div>
+      </div>
+      <div class="smile" data-name="p-9">
+        <img src="imgs/pic31.jpg" width="100%">
+        <h3>Samsung</h3>
+        <div class="price">$2,450.00</div>
+      </div>
+      <div class="smile" data-name="p-10">
+        <img src="Images/img14.png" width="100%">
+        <h3>Hisense</h3>
+        <div class="price">$2,020.00</div>
+      </div>
+      <div class="smile" data-name="p-11">
+        <img src="imgs/pic12.jpg" width="100%">
+        <h3>Samsung UHD Screen</h3>
+        <div class="price">$1,250.00</div>
+      </div>
+      <div class="smile" data-name="p-12">
+        <img src="Images/img10.png" width="100%">
+        <h3>LG 43LM6370PVA 43 inches</h3>
+        <div class="price">$1,940.00</div>
+      </div>
+      <div class="smile" data-name="p-13">
+        <img src="imgs/pic24.jpg" width="100%">
+        <h3>LG 32LP500BPTA 32 inches</h3>
+        <div class="price">$2,170.00</div>
+      </div>
+      <div class="smile" data-name="p-14">
+        <img src="imgs/pic28.jpg" width="100%">
+        <h3>SB240Y G0 Widescreen</h3>
+        <div class="price">$1,200.00</div>
+      </div>
+      <div class="smile" data-name="p-15">
+        <img src="imgs/pic26.jpg" width="100%">
+        <h3>Vero CB272K Widescreen</h3>
+        <div class="price">$1,120.00</div>
+      </div>
+      <div class="smile" data-name="p-16">
+        <img src="imgs/pic4.jpg" width="100%">
+        <h3>32 Frameless Android</h3>
+        <div class="price">$1,999.00</div>
+      </div>
+      <div class="smile" data-name="p-17">
+        <img src="imgs/pic29.jpg" width="100%">
+        <h3>SB240Y G0 Widescreen</h3>
+        <div class="price">$2,099.00</div>
+      </div>
+      <div class="smile" data-name="p-18">
+        <img src="imgs/pic30.jpg" width="100%">
+        <h3>LG 43LM5500PVA 43 inches</h3>
+        <div class="price">$1,870.00</div>
+      </div>
+    
+    </div>
+    </div>
+    
+    <div class="products-preview">
+      <div class="preview" data-target="p-1">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic13.jpg" width="100%">
+        <h3>LG 32LP500BPTA 32 inches</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
         </div>
-        <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-          <img src="Images/img4.png" style="border-radius: 10px; width: 200px; height:200px;">
-             <div style="text-align: center;">
-              <h4> 32 Frameless Android <br>Smart LED TV</h4>
-             <p>$1,299.00</p>
-             <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-             </div>
-        </div>
-        <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-          <img src="Images/img4.png" style="border-radius: 10px; width: 200px; height:200px;">
-             <div style="text-align: center;">
-              <h4> 32 Frameless Android <br>Smart LED TV</h4>
-             <p>$1,299.00</p>
-             <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-             </div>
-        </div>
-        <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-          <img src="Images/img4.png" style="border-radius: 10px; width: 200px; height:200px;">
-             <div style="text-align: center;">
-              <h4> 32 Frameless Android <br>Smart LED TV</h4>
-             <p>$1,299.00</p>
-             <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-             </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,200.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
         </div>
       </div>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 5px;">
-                    
-            <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                  <div style="text-align: center;">
-                   <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-45.png" width="100%" height="100%"></div>
-                  </div>
-            </div>
-            <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 200px; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-35.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 200px; height:200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 200px; height: 300px; border-radius: 10px; margin-left: 1px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 200px; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-40.png" width="100%" height="100%"></div>
-                   </div>
-            </div>        
+      <div class="preview" data-target="p-2">
+        <i class="fas fa-times"></i>
+        <img src="Images/img1.png" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
         </div>
-    <div class="">
-        <div style="display: flex; flex-wrap: wrap; ">
-                    
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                  <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-45.png" width="100%" height="100%"></div>
-                  </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-25.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-20.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-15.png" width="100%" height="100%"></div>
-                   </div>
-            </div>        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,705.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
         </div>
+      </div>
+      <div class="preview" data-target="p-3">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic14.jpg" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$941.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-4">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic1.jpg" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$2,700.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-5">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic2.jpg" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$3,840.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-6">
+        <i class="fas fa-times"></i>
+        <img src="Images/img4.png" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,500.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-7">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic15.jpg" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$2,050.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-8">
+        <i class="fas fa-times"></i>
+        <img src="Images/img5.png" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,090.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-9">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic31.jpg" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$2,450.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-10">
+        <i class="fas fa-times"></i>
+        <img src="Images/img14.png" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$2,020.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-11">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic12.jpg" width="100%">
+        <h3>full being</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,250.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-12">
+        <i class="fas fa-times"></i>
+        <img src="Images/img10.png" width="100%">
+        <h3>LG 43LM6370PVA 43 inches</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,940.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-13">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic24.jpg" width="100%">
+        <h3>LG 32LP500BPTA 32 inches</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$2,170.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-14">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic28.jpg" width="100%">
+        <h3>SB240Y G0 Widescreen</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,200.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-15">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic26.jpg" width="100%">
+        <h3>Vero CB272K Widescreen</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,120.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-16">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic4.jpg" width="100%">
+        <h3>32 Frameless Android</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,999.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-17">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic29.jpg" width="100%">
+        <h3>SB240Y G0 Widescreen</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$2,099.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
+      <div class="preview" data-target="p-18">
+        <i class="fas fa-times"></i>
+        <img src="imgs/pic30.jpg" width="100%">
+        <h3>LG 43LM5500PVA 43 inches</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequator, dolorem.</p>
+        <div class="price">$1,870.00</div>
+        <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="cart.html" class="cart">add to cart</a>
+        </div>
+      </div>
     </div>
-    <div class="">
-        <div style="display: flex; gap: 5px;">
-                    
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                  <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-35.png" width="100%" height="100%"></div>
-                  </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-45.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;"> 
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-40.png" width="100%" height="100%"></div>
-                   </div>
-            </div>        
-        </div>
-    </div>
-    <div class="">
-        <div style="display: flex; gap: 5px;">
-                    
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                  <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-45.png" width="100%" height="100%"></div>
-                  </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-40.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-35.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-                   </div>
-            </div>        
-        </div>
-    </div>
-    <div class="">
-        <div style="display: flex; gap: 5px;">
-                    
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                  <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-30.png" width="100%" height="100%"></div>
-                  </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-35.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-40.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-45.png" width="100%" height="100%"></div>
-                   </div>
-            </div>        
-        </div>
-    </div>
-    <div class="">
-        <div style="display: flex; gap: 2px;">
-                    
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                  <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-35.png" width="100%" height="100%"></div>
-                  </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-15.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-25.png" width="100%" height="100%"></div>
-                   </div>
-            </div>
-            <div style=" border: 5px solid white; width: 300px; height: 300px; border-radius: 10px; margin-left: 10px; box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);" class="col-4">
-                <img src="Images/img4.png" style="border-radius: 10px; width: 100%; height: 200px;">
-                   <div style="text-align: center;">
-                    <h4> 32 Frameless Android <br>Smart LED TV</h4>
-                   <p>$1,299.00</p>
-                   <div class="rating"><img src="ratings/rating-15.png" width="100%" height="100%"></div>
-                   </div>
-            </div>        
-        </div>
-    </div>
-</div>
-       
-    <!-- LATEST PRODUCTS -->
-        <div class="row">
-            <div class="col-4">
-                <img src="Images/img5.png">
-                <h4>LED TV</h4>
-                <p>$150.00</p>
-                </div>
-                <div class="col-4">
-                    <img src="Images/img6.png">
-                    <h4>LED TV</h4>
-                    <p>$150.00</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="Images/img7.png">
-                        <h4>LED TV</h4>
-                        <p>$150.00</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="Images/img8.png">
-                            <h4>LED TV</h4>
-                            <p>$150.00</p>
-                            </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <img src="Images/img9.png">
-                    <h4>LED TV</h4>
-                    <p>$150.00</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="Images/img10.png">
-                        <h4>LED TV</h4>
-                        <p>$150.00</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="Images/img16.png">
-                            <h4>LED TV</h4>
-                            <p>$150.00</p>
-                            </div>
-                            <div class="col-4">
-                                <img src="Images/img18.png">
-                                <h4>LED TV</h4>
-                                <p>$150.00</p>
-                                </div>
-                </div>
-
-                <div class="page-button">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>&#8594;</span>
-                </div>
-            </div>
+    
             <!-- footer -->
             <div class="footer">
                 <div class="container">
@@ -363,11 +512,12 @@
                             <h3>Download Our App</h3>
                             <p style="color: white;">Download App for Android and ios mobile phones.</p>
                             <div class="app-logo">
-                                <img src="Images/goplay.png">
-                                <img src="Images/appstore.png">
+                                <a href="https://play.google.com/store/games?hl=en"><img src="Images/goplay.png"></a>
+                       <a href="https://www.apple.com/app-store/"><img src="Images/appstore.png"></a>
                             </div>
                         </div>
                         <div class="footer-col-2">
+                            <a href="products.html"><img src="All Products - STORE_files/logo.png" alt=""></a>
                             <p style="color: white;">Our Purpose Is To Sustainably Make the Pleasure and Benefits of Media Accessible to the Many</p>
                         </div>
                         <div class="footer-col-3">
@@ -414,9 +564,5 @@
 
 
 
-
-
-<script src="JS/script.js"></script>
- <!-- <script src="JS/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>
